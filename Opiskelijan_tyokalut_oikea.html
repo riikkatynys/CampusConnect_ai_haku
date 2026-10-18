@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CampusConnect – Opiskelijan työkalut</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Opiskelijan_tyokalut_oikea.css?v=4">
+</head>
+
+<body>
+  <div class="toast" id="toastNotification" role="status">
+    <span class="material-symbols-outlined toast-icon">check_circle</span>
+    <span id="toastMessage">Ilmoitus</span>
+  </div>
+
+  <header class="app-header">
+    <div class="header-content">
+      <div class="header-brand">
+        <a class="back-button" href="../AI_haku/AI_haku.html" aria-label="Takaisin tekoälyhakuun" title="Takaisin tekoälyhakuun">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </a>
+
+        <div class="brand-details">
+          <img
+            class="brand-logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApJDcvmVwYTclLAcSluev7fCjdgBOlaUFAlrvUp4he4KDC0HDIxh3eViFgekZOel_8M4ws6A_fTFov6_ox0yRq3amtxlwYvMlEoygT4ljWXHPMlVajKj_CLj6gnI1b_5RuLwwh8H_MLW0zeTEAERJceiKZ_k-ZiPC7-biV9w4kJwkepldtrEKFxy6C371IGIczXWx6NFG1vBZhTzG0q96sN-rz9UREiloY0gBgABBPlZTF36E1huEeg0x8YnNVca_6yw"
+            alt="CampusConnect Opiskelijan tietopankki"
+          >
+
+          <div class="brand-text">
+            <div class="brand-title-row">
+              <h1 class="brand-title">Opiskelijan työkalut</h1>
+              <span class="portal-badge">Portaali</span>
+            </div>
+            <span class="brand-subtitle">Haaga-Helia opintopalvelut</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <span class="student-badge">Opiskelija</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="student-card">
+      <div class="student-card-top">
+        <div class="student-info">
+          <div class="student-avatar-wrap">
+            <img
+              class="student-avatar"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUS1Syg-EAEza_yRDoxevQKg5_oBen4vR-dHr7cisWxsy9-fikOQ44QxnekGb6Pn6wYfoHfnPm3h14Ojh4k64PkxroW3LK3nSgxC6dSFoWBv2k1k-WN75M4BnnIgHyELnssPqldIr12Pu5Agk9xECmQhL5FlMtS2A5JnEeqT7nshoRp-JnE5--HXLnXwSAadUpBl6H2TGG50ZgI77Tz2UCIX2qvXT3Rcyl5JdeVt3hQf2uSvORRahz"
+              alt="Eemeli Salminen"
+            >
+            <span class="student-status-icon">
+              <span class="material-symbols-outlined">check</span>
+            </span>
+          </div>
+
+          <div class="student-details">
+            <div class="student-name-row">
+              <strong class="student-name">Eemeli Salminen</strong>
+              <span class="attendance-badge">Läsnäoleva</span>
+            </div>
+            <span class="student-program">Tietojenkäsittely (BBA) • Pasilan kampus</span>
+            <span class="login-status">
+              <span class="material-symbols-outlined">verified_user</span>
+              HAKA-kirjautuminen aktiivinen
+            </span>
+          </div>
+        </div>
+
+        <div class="credit-total">
+          <span class="credit-label">Kertymä</span>
+          <strong>145 <span>/ 210 op</span></strong>
+        </div>
+      </div>
+
+      <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Opintopistekertymä"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="69"
+        aria-valuetext="145 / 210 op, 69 prosenttia"
+      >
+        <div class="progress-value"></div>
+      </div>
+    </div>
+
+    <div class="section-heading">
+      <div>
+        <h2 id="tools-heading">Opiskelijan keskeiset työkalut</h2>
+        <p>Pääsy Haaga-Helian virallisiin järjestelmiin ja opintosovelluksiin</p>
+      </div>
+      <span class="service-count">8 PALVELUA</span>
+    </div>
+
+    <a class="tools-banner" id="ai-search-banner" href="../AI_haku/AI_haku.html">
+      <span class="tools-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6z"/>
+        </svg>
+      </span>
+      <span class="tools-banner-copy">
+        <strong>Palaa tekoälyhakuun</strong>
+        <small>Kysy tenttipäivistä, ohjeista tai opintopalveluista</small>
+      </span>
+      <span class="banner-link">Avaa haku →</span>
+    </a>
+
+    <section class="tools-grid" aria-labelledby="tools-heading">
+      <a class="tool-card" href="https://peppi.haaga-helia.fi" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">school</span></span>
+          <span class="category-badge cyan">HOPS</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Peppi</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">HOPS, ilmoittautumiset ja arvosanat</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://hhmoodle.haaga-helia.fi/login/index.php" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon moodle-icon">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKpUI-f1kMe0sBx3NB59EJq9JDOsFvAjuhcpLq2093DpKPaVNKCjAN7m4gBMvGwcyHEnsnTei4scaAkeIQpX_QMhOaxmRDwt0y-UC2w72TC3w9KjInjNyGG-pRgLonWEhZ4h2-zx-fTs-TKBxahHvkCFH1cCmlKiunoXeidRyFdfqJV5SZQiTaVCBLVFH_hiAOoN-_rE1vUdgcXCJV2vTwwmj23mlYBAItYvskFyUk1yztBxNtT4ekwm7jvsqOoqvTA" alt="Moodle">
+          </span>
+          <span class="category-badge purple">Kurssit</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Moodle</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Kurssialueet, tehtävät ja tentit</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://wihi.haaga-helia.fi" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">history_edu</span></span>
+          <span class="category-badge cyan">Opinnäyte</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Wihi</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Opinnäytetyön ohjaus &amp; vaiheet</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://www.tuudo.fi" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">calendar_today</span></span>
+          <span class="category-badge green">Mobiili</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Tuudo</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Lukujärjestys, ruokalistat ja tilat</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://opinto-opas.haaga-helia.fi" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">menu_book</span></span>
+          <span class="category-badge cyan">Oppaat</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Opinto-opas</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Opetussuunnitelmat &amp; tutkintosääntö</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="../It_Helpdesk/IT_helpdesk.html">
+        <span class="tool-card-top">
+          <span class="tool-icon campusconnect-icon">
+            <img src="../It_Helpdesk/opiskelijan_tietopankki_kuvake.jpg" alt="">
+          </span>
+          <span class="category-badge black">it-tuen chat</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>IT Helpdesk</h3>
+          </div>
+          <span class="tool-description">Salasanat, tulostus ja laiteapu</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://atomi.haaga-helia.fi" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">verified</span></span>
+          <span class="category-badge green">Todistus</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>Atomi</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Viralliset sähköiset opiskelutodistukset</span>
+        </div>
+      </a>
+
+      <a class="tool-card" href="https://www.yths.fi/asiointi/self/" target="_blank" rel="noopener noreferrer">
+        <span class="tool-card-top">
+          <span class="tool-icon"><span class="material-symbols-outlined">local_hospital</span></span>
+          <span class="category-badge purple">Terveys</span>
+        </span>
+        <div class="tool-card-info">
+          <div class="tool-title-row">
+            <h3>YTHS Self</h3>
+            <span class="material-symbols-outlined external-icon">open_in_new</span>
+          </div>
+          <span class="tool-description">Opiskelijaterveydenhuolto &amp; ajat</span>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a href="https://www.haaga-helia.fi">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <span>Koti</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/ajankohtaista/tapahtumat">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span>Tapahtumat</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/ajankohtaista/uutiset">
+      <i class="fa fa-rss" aria-hidden="true"></i>
+      <span>Uutiset</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/avainsana/palvelut">
+      <i class="fa fa-university" aria-hidden="true"></i>
+      <span>Palvelut</span>
+    </a>
+    <a href="https://hhmoodle.haaga-helia.fi/user/profile.php">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <span>Profiili</span>
+    </a>
+  </footer>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById("toastNotification");
+      const toastMessage = document.getElementById("toastMessage");
+
+      if (!toast || !toastMessage) {
+        return;
+      }
+
+      toastMessage.textContent = message;
+      toast.classList.add("toast-visible");
+
+      window.setTimeout(() => {
+        toast.classList.remove("toast-visible");
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

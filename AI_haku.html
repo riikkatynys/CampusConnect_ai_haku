@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect – AI-haku</title>
+  <link rel="stylesheet" href="AI_haku.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CampusConnect-etusivu">
+      <img
+        class="brand-logo"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuApJDcvmVwYTclLAcSluev7fCjdgBOlaUFAlrvUp4he4KDC0HDIxh3eViFgekZOel_8M4ws6A_fTFov6_ox0yRq3amtxlwYvMlEoygT4ljWXHPMlVajKj_CLj6gnI1b_5RuLwwh8H_MLW0zeTEAERJceiKZ_k-ZiPC7-biV9w4kJwkepldtrEKFxy6C371IGIczXWx6NFG1vBZhTzG0q96sN-rz9UREiloY0gBgABBPlZTF36E1huEeg0x8YnNVca_6yw"
+        alt="CampusConnect"
+      >
+      <span class="brand-name">CampusConnect</span>
+      <span class="ai-label">RAG AI</span>
+    </a>
+    <span class="student-badge"><span class="status-dot"></span> Opiskelija</span>
+  </header>
+
+  <main class="content">
+    <section class="card">
+      <div class="search-heading">
+        <div>
+          <span class="eyebrow">Älykäs opiskelijahaku</span>
+          <h1>Kyselytila &amp; Avustaja</h1>
+          <p class="subheading">Live RAG • Peppi &amp; MyNet</p>
+        </div>
+        <span class="verified-badge">✓ Faktantarkistettu</span>
+      </div>
+
+      <div class="input-bar">
+        <input type="text" aria-label="Kysy opinnoista AI-avusteisesta hausta" placeholder="Kysy opinnoista AI-avusteisesta hausta">
+        <button class="send" type="button" aria-label="Lähetä kysymys">➤</button>
+      </div>
+
+      <h2 class="small-heading">Rajaa tietokantaa</h2>
+      <div class="filters">
+        <button class="filter active" type="button">Kaikki Haaga-Helia</button>
+        <button class="filter" type="button">Peppi</button>
+        <button class="filter" type="button">Moodle</button>
+        <button class="filter" type="button">Tenttiaikataulut</button>
+      </div>
+
+      <button class="search-button" type="button">⌕ Hae luotettava vastaus</button>
+    </section>
+
+    <a class="tools-banner" href="../Opiskelijan_tyokalut/Opiskelijan_tyokalut_oikea.html">
+      <span class="tools-icon">▦</span>
+      <span class="tools-banner-copy">
+        <strong>Opiskelijan työkalut</strong>
+        <small>Peppi • Moodle • Wihi • Helpdesk</small>
+      </span>
+      <span class="banner-link">Avaa työkalut →</span>
+    </a>
+
+    <div class="notice">
+      <span class="notice-icon">✓</span>
+      <p><strong>Faktantarkistettu vastaus</strong> perustuu Haaga-Helian virallisiin ohjeisiin.</p>
+    </div>
+
+    <article class="card answer-card">
+      <div class="answer-header">
+        <div>
+          <span class="eyebrow">Vahvistettu opinto-ohje</span>
+          <p class="muted">Päivitetty tänään</p>
+        </div>
+        <button class="copy-button" type="button">Kopioi</button>
+      </div>
+
+      <h2>Uusintatenttiin ilmoittautuminen ja määräajat</h2>
+
+      <div class="highlight">
+        <strong>Nyrkkisääntö:</strong> tarkista ilmoittautumisen määräaika Pepistä ennen tenttiä.
+      </div>
+
+      <p>Uusintatenttiin ilmoittaudutaan Pepissä. Tarkista oman opintojaksosi ohjeet ja tentin tiedot opiskelijatietojärjestelmästä.</p>
+
+      <h3>Ilmoittautuminen vaiheittain</h3>
+      <ol class="steps">
+        <li><strong>Kirjaudu Peppiin</strong> ja avaa tenttien ilmoittautumissivu.</li>
+        <li><strong>Etsi oikea tentti</strong> opintojakson nimen tai koodin avulla.</li>
+        <li><strong>Ilmoittaudu</strong> ja tarkista, että ilmoittautuminen näkyy hyväksyttynä.</li>
+      </ol>
+
+      <section class="support-banner">
+        <h3>Hyödylliset linkit</h3>
+        <a href="https://student.home.haaga-helia.fi/" target="_blank" rel="noopener noreferrer">
+          Peppi-opiskelijatietojärjestelmä →
+        </a>
+        <a href="https://www.haaga-helia.fi/" target="_blank" rel="noopener noreferrer">
+          Haaga-Helian verkkosivut →
+        </a>
+      </section>
+
+      <div class="feedback">
+        <span>Oliko vastauksesta apua?</span>
+        <div>
+          <button type="button" aria-label="Hyödyllinen">👍</button>
+          <button type="button" aria-label="Ei hyödyllinen">👎</button>
+        </div>
+      </div>
+    </article>
+
+    <section class="faq">
+      <h2>Usein kysyttyä kampuksella</h2>
+      <a href="#">Mistä löydän opiskelutodistuksen? <span>›</span></a>
+      <a href="#">Miten opinnäytetyön ohjaaja valitaan? <span>›</span></a>
+      <a href="#">Miten teen HOPS-muutoksia? <span>›</span></a>
+    </section>
+
+    <section class="support-banner">
+      <p class="eyebrow">Opintoneuvonta ja tuki</p>
+      <h2>Tarvitsetko henkilökohtaista tukea?</h2>
+      <a href="#">Ota yhteys opinto-ohjaajaan →</a>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a href="https://www.haaga-helia.fi">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <span>Koti</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/ajankohtaista/tapahtumat">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span>Tapahtumat</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/ajankohtaista/uutiset">
+      <i class="fa fa-rss" aria-hidden="true"></i>
+      <span>Uutiset</span>
+    </a>
+    <a href="https://www.haaga-helia.fi/fi/avainsana/palvelut">
+      <i class="fa fa-university" aria-hidden="true"></i>
+      <span>Palvelut</span>
+    </a>
+    <a href="https://hhmoodle.haaga-helia.fi/user/profile.php">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <span>Profiili</span>
+    </a>
+  </footer>
+</body>
+</html>

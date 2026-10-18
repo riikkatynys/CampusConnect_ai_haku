@@ -1,0 +1,462 @@
+:root {
+  color-scheme: light;
+  --petrol: #396d78;
+  --cyan: #00aacd;
+  --green: #82cc00;
+  --gray: #000000;
+  --text: #000000;
+  --border: #e5e7eb;
+  --background: #f5f7f8;
+  --font: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 76px 0 82px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Yläpalkki */
+.topbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+  background: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-size: 18px;
+  color: var(--petrol);
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 40px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.ai-label,
+.student-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.ai-label {
+  background: var(--petrol);
+  color: white;
+}
+
+.student-badge {
+  border: 1px solid var(--border);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* Sivun sisältö ja hakukortti */
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card,
+.notice,
+.tools-banner,
+.faq,
+.support-banner {
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+}
+
+.card {
+  padding: 20px;
+}
+
+.search-heading,
+.answer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  color: var(--petrol);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.small-heading {
+  color: var(--petrol);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-heading h1,
+.answer-card h2 {
+  margin: 6px 0;
+  color: var(--petrol);
+}
+
+.search-heading h1 {
+  font-size: 22px;
+}
+
+.answer-card h2,
+.answer-card h3,
+.faq h2,
+.support-banner h2,
+.support-banner h3 {
+  font-size: 20px;
+}
+
+.subheading,
+.muted {
+  margin: 4px 0;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.verified-badge {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: var(--green);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input-bar {
+  display: flex;
+  gap: 8px;
+}
+
+.input-bar input {
+  min-width: 0;
+  flex: 1;
+  padding: 20px 50px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.send {
+  background: var(--petrol);
+  color: white;
+  font-size: 18px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.filter {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.filter.active,
+.search-button {
+  background: var(--petrol);
+  color: white;
+}
+
+.search-button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Opiskelijan työkalut -linkki */
+.tools-banner {
+  display: flex;
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 0;
+  background: var(--petrol);
+  color: white;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tools-banner:hover {
+  background: #315f68;
+}
+
+.tools-banner:active {
+  transform: scale(0.99);
+}
+
+.tools-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 28px;
+}
+
+.tools-banner-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.tools-banner-copy strong {
+  font-size: 15px;
+}
+
+.tools-banner-copy small {
+  margin-top: 4px;
+  color: #e5e7eb;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.banner-link {
+  margin-left: auto;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: white;
+  color: var(--petrol);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Faktantarkistus ja vastaus */
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice-icon {
+  color: var(--petrol);
+  font-size: 24px;
+}
+
+.answer-card p {
+  line-height: 1.6;
+}
+
+.highlight {
+  margin: 16px 0;
+  padding: 14px;
+  border-left: 4px solid var(--cyan);
+  background: #f4fbfc;
+  line-height: 1.5;
+}
+
+.steps {
+  padding-left: 22px;
+  line-height: 1.7;
+}
+
+.steps li {
+  margin-bottom: 8px;
+}
+
+.copy-button {
+  border: 0;
+  background: transparent;
+  color: var(--petrol);
+  cursor: pointer;
+}
+
+.support-banner a {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 6px 9px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.support-banner a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.feedback button {
+  border: 0;
+  background: white;
+  cursor: pointer;
+}
+
+/* Usein kysyttyä ja tuki */
+.faq {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.faq h2 {
+  margin: 0 0 6px;
+  color: var(--petrol);
+}
+
+.faq a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.support-banner {
+  padding: 20px;
+  background: linear-gradient(110deg, var(--petrol), #006f84);
+  color: white;
+}
+
+.support-banner h2 {
+  margin: 8px 0;
+}
+
+.support-banner .eyebrow {
+  color: white;
+}
+
+/* Alapalkin navigaatio */
+.bottom-nav {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 20;
+  display: grid;
+  width: 100%;
+  min-height: 64px;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: space-around;
+  overflow-x: auto;
+  background: #0067a6;
+}
+
+.bottom-nav a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 2px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.bottom-nav i {
+  font-size: 19px;
+}
+
+/* Mobiilinäkymä */
+@media (max-width: 600px) {
+  .content {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .search-heading {
+    align-items: flex-start;
+  }
+
+  .verified-badge {
+    max-width: 120px;
+    text-align: center;
+  }
+
+  .tools-banner {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .banner-link {
+    margin-left: 0;
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Haaga-Helia IT Helpdesk</title>
+  <link rel="stylesheet" href="IT_helpdesk.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="header-brand">
+        <a class="back-btn" href="../AI_haku/AI_haku.html" aria-label="Takaisin tekoälyhakuun">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        </a>
+
+        <div class="brand">
+          <img
+            class="logo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApJDcvmVwYTclLAcSluev7fCjdgBOlaUFAlrvUp4he4KDC0HDIxh3eViFgekZOel_8M4ws6A_fTFov6_ox0yRq3amtxlwYvMlEoygT4ljWXHPMlVajKj_CLj6gnI1b_5RuLwwh8H_MLW0zeTEAERJceiKZ_k-ZiPC7-biV9w4kJwkepldtrEKFxy6C371IGIczXWx6NFG1vBZhTzG0q96sN-rz9UREiloY0gBgABBPlZTF36E1huEeg0x8YnNVca_6yw"
+            alt="CampusConnect"
+          >
+          <div class="brand-copy">
+            <h1 class="brand-title">IT-helpdesk</h1>
+            <span class="brand-subtitle">tekninen tuki</span>
+          </div>
+        </div>
+      </div>
+
+      <span class="badge">Opiskelija</span>
+    </header>
+
+    <main class="content">
+      
+
+      <section class="card" aria-labelledby="helpdesk-status">
+        <div class="status-row">
+          <div class="status">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 id="helpdesk-status">Virallinen IT Helpdesk</h2>
+          </div>
+          <span class="status-tag">Helpdesk avoinna</span>
+        </div>
+
+        <div class="quick-grid">
+          <a class="quick-item" href="tel:080097750">
+            <span>☎</span>
+            <strong>0800 97750</strong>
+            <small>Maksuton (vain akuutit)</small>
+          </a>
+
+          <a class="quick-item" href="mailto:helpdesk@haaga-helia.fi" aria-label="Lähetä sähköpostia osoitteeseen helpdesk@haaga-helia.fi">
+            <span>✉</span>
+            <strong>helpdesk@...</strong>
+            <small>Säilytä [#ID:HHI]</small>
+          </a>
+        </div>
+
+        <div class="hours">
+          <div class="row">
+            <span>🕒</span>
+            <div>
+              <strong>Puhelinpäivystys:</strong>
+              <p>Ma–ke 8–16, To 8–13 &amp; 14–16, Pe 8–16</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <span>📍</span>
+            <div>
+              <strong>Päivystyspisteet kampuksilla:</strong>
+              <p>Pasila, Malmi, Haaga, Porvoo, Vierumäki</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <a class="tools-banner" href="../AI_haku/AI_haku.html" aria-label="Palaa tekoälyhakuun">
+        <span class="tools-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6z"/>
+          </svg>
+        </span>
+        <span class="tools-banner-copy">
+          <strong>Palaa tekoälyhakuun</strong>
+          <small>Kysy tenttipäivistä, ohjeista tai opintopalveluista</small>
+        </span>
+        <span class="banner-link">Avaa haku →</span>
+      </a>
+
+      <h2 class="section-title">Pika-aiheet ja UKK</h2>
+
+      <div class="chips">
+        <button type="button">Unohtunut salasana</button>
+        <button type="button">Peppi-kirjautuminen</button>
+        <button type="button">Eduroam Wi-Fi</button>
+        <button type="button">MFA-vaihto</button>
+      </div>
+
+      <section class="chat" aria-label="Keskustelu IT-botin kanssa">
+        <div class="message">
+          <div class="avatar bot">AI</div>
+          <div class="bubble">
+            <strong>Haaga-Helia IT-Botti</strong>
+            <p>Tervetuloa IT Helpdeskiin. Voit hakea ratkaisua salasanaongelmiin, Eduroam-verkkoon ja Peppi-kirjautumiseen.</p>
+          </div>
+        </div>
+
+        <div class="message user">
+          <div class="bubble user-bubble">
+            <p>Miten saan Eduroamin toimimaan ja miten uusin unohtuneen salasanani ilman tukea?</p>
+          </div>
+          <div class="avatar user">S</div>
+        </div>
+      </section>
+    </main>
+
+    <div class="input-bar">
+      <button class="attach" type="button" aria-label="Liitä tiedosto">📎</button>
+      <input type="text" aria-label="Kysy IT-tuesta" placeholder="Kysy IT-tuesta...">
+      <button class="send" type="button" aria-label="Lähetä viesti">➤</button>
+    </div>
+
+    <footer class="bottom-nav" aria-label="Päänavigaatio">
+      <a href="https://www.haaga-helia.fi">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Koti</span>
+      </a>
+      <a href="https://www.haaga-helia.fi/fi/ajankohtaista/tapahtumat">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <span>Tapahtumat</span>
+      </a>
+      <a href="https://www.haaga-helia.fi/fi/ajankohtaista/uutiset">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+        <span>Uutiset</span>
+      </a>
+      <a href="https://www.haaga-helia.fi/fi/avainsana/palvelut">
+        <i class="fa fa-university" aria-hidden="true"></i>
+        <span>Palvelut</span>
+      </a>
+      <a href="https://hhmoodle.haaga-helia.fi/user/profile.php">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <span>Profiili</span>
+      </a>
+    </footer>
+  </div>
+</body>
+</html>

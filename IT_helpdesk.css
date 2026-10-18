@@ -1,0 +1,676 @@
+:root {
+  color-scheme: light;
+  --petrol: #396d78;
+  --cyan: #00aacd;
+  --green: #82cc00;
+  --purple: #8b3aa3;
+  --gray: #000000;
+  --text: #000000;
+  --background: #f5f7f8;
+  --white: #ffffff;
+  --line: #e5e7eb;
+  --font: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--petrol);
+  outline-offset: 3px;
+}
+
+/* Sivun asettelu */
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  background: var(--white);
+}
+
+.content {
+  padding: 16px 16px 160px;
+}
+
+/* Yläpalkki */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.back-btn {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--petrol);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #f3f4f6;
+}
+
+.back-btn .material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.header-brand {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 60px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.brand-title {
+  overflow: hidden;
+  margin: 0;
+  color: var(--petrol);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.badge {
+  padding: 5px 10px;
+  border: 1px solid rgba(57, 109, 120, 0.2);
+  border-radius: 999px;
+  background: rgba(57, 109, 120, 0.08);
+  color: var(--petrol);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Linkki tekoälyhakuun ja helpdesk-kortti */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--petrol);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.pill {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+
+.card {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--petrol);
+  font-weight: 700;
+}
+
+.status h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 6px rgba(130, 204, 0, 0.14);
+}
+
+.status-tag {
+  padding: 5px 8px;
+  border: 1px solid rgba(130, 204, 0, 0.35);
+  border-radius: 999px;
+  background: rgba(227, 245, 195, 0.12);
+  color: #0a7013;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.quick-item {
+  display: flex;
+  min-height: 44px;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.quick-item strong {
+  font-size: 15px;
+}
+
+.quick-item small {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.tools-banner {
+  display: flex;
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--petrol);
+  color: var(--white);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.tools-banner:hover {
+  background: #315f68;
+}
+
+.tools-banner:active {
+  transform: scale(0.99);
+}
+
+.tools-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+.campusconnect-icon {
+  display: grid;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tools-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.tools-banner-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.tools-banner-copy strong {
+  font-size: 15px;
+}
+
+.tools-banner-copy small {
+  margin-top: 4px;
+  color: #e5e7eb;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.banner-link {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--petrol);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hours {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.row p {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Pika-aiheet ja keskustelu */
+.section-title {
+  margin: 8px 2px 10px;
+  color: var(--petrol);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.chips button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.avatar {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.avatar.bot {
+  background: var(--petrol);
+  color: var(--white);
+}
+
+.avatar.user {
+  background: #e5e7eb;
+  color: var(--text);
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f3f4f6;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.bubble strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--petrol);
+}
+
+.bubble p {
+  margin: 0;
+}
+
+.user-bubble {
+  border-color: var(--petrol);
+  background: var(--petrol);
+  color: var(--white);
+}
+
+/* Viestikenttä */
+.input-bar {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  display: flex;
+  width: min(100%, 480px);
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px 14px;
+  transform: translateX(-50%);
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.attach,
+.send {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.attach {
+  background: transparent;
+  color: var(--gray);
+  font-size: 18px;
+}
+
+.send {
+  background: var(--petrol);
+  color: var(--white);
+  font-size: 18px;
+}
+
+.input-bar input {
+  min-width: 0;
+  flex: 1;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Alapalkin navigaatio */
+.bottom-nav {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 100;
+  display: grid;
+  width: 100%;
+  height: 64px;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: space-around;
+  overflow-x: auto;
+  padding: 6px 8px;
+  border-top: 1px solid var(--line);
+  background: #0067a6;
+}
+
+.bottom-nav a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 2px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bottom-nav a.active {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.bottom-nav i {
+  font-size: 19px;
+}
+
+/* Pienet näytöt */
+@media (max-width: 480px) {
+  .topbar {
+    gap: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .header-brand {
+    gap: 6px;
+  }
+
+  .brand {
+    gap: 4px;
+  }
+
+  .logo {
+    height: 42px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .brand-subtitle {
+    font-size: 11px;
+  }
+
+  .badge {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar {
+    gap: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .header-brand {
+    gap: 4px;
+  }
+
+  .brand {
+    gap: 6px;
+  }
+
+  .back-btn {
+    width: 36px;
+  }
+
+  .logo {
+    height: 36px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .badge {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-banner {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .banner-link {
+    margin-left: 0;
+    padding: 8px 9px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .topbar {
+    gap: 6px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .header-brand {
+    gap: 4px;
+  }
+
+  .back-btn {
+    width: 32px;
+  }
+
+  .brand {
+    gap: 4px;
+  }
+
+  .badge {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
